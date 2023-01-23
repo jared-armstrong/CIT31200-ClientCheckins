@@ -1,0 +1,67 @@
+/*
+	Constants
+
+	Changing any of these values will change the entire site.
+*/
+:root {
+	--foreground-color: pink;
+	--background-color: white;
+	--navbar-color: pink;
+	--text-color: blue;
+	--nav-height: 5vh;
+	--left-padding: 2%;
+	--right-padding: 2%;
+}
+
+body {
+	background-color: var(--background-color);
+
+	/*Reset margins so that elements can take up 100% of the window space if desired*/
+	margin: 0;
+	padding: 0;
+	/*Move out the way of the nav element*/
+	padding-top: var(--nav-height);
+}
+
+nav {
+	background-color: var(--navbar-color);
+
+	display: flex;
+	flex-direction: row;
+
+	padding-left: var(--left-padding);
+	padding-right: var(--right-padding);
+
+	/*Make the nav element stick to the top of the page*/
+	position: fixed;
+	top: 0;
+	height: var(--nav-height);
+
+	width: 100%;
+
+	/*Center elements vertically*/
+	align-items: center;
+}
+
+.nav-item {
+	background-color: var(--background-color);
+	color: var(--text-color);
+
+	/*Add a right margin to space out elements*/
+	margin-right: 2.5%;
+}
+
+.logo {
+	width: 5%;
+	margin-right: 2.5%;
+
+	/*Cap the height so it doesn't overflow. Cap the width so that the approx. aspect ratio is maintained*/
+	max-height: 100%;
+	max-width: 50px;
+}
+
+#content {
+	/*Add the padding back in*/
+	padding-left: var(--left-padding);
+	padding-right: var(--right-padding);
+}
