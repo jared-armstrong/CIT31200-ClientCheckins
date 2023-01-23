@@ -1,8 +1,8 @@
-# ClientCheckin1
+# Client Check in
 Client Check in 1#
 
 
-This is a readme file over check in 1. 
+This is a readme file over the client check in. 
 
 Felipe Baro-Tayahua
 Seth Johnson
@@ -11,4 +11,4 @@ Jared Armstrong
 
 Our client is a school that we will be working closely with. 
 
-https://felipebarotayahua.github.io/ClientCheckin/
+https://felipebarotayahua.github.io/Ckeck-in/
