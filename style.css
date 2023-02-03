@@ -10,8 +10,14 @@
 	--navbar-color: red;
 	--text-color: yellow;
 	--nav-height: 5vh;
+	--nav-item-padding: 1vh;
 	--left-padding: 2%;
 	--right-padding: 2%;
+	--nav-right-margin: 2.5%;
+}
+
+* {
+	color: var(--text-color);
 }
 
 body {
@@ -45,22 +51,28 @@ nav {
 }
 
 .nav-item {
+	display: flex;
+	flex-direction: column;
+
 	background-color: var(--background-color);
 	color: var(--text-color);
 
 	/*Add a right margin to space out elements*/
-	margin-right: 2.5%;
+	margin-right: var(--nav-right-margin);
+
+	padding: var(--nav-item-padding);
+	align-items: center;
 }
 
 .logo {
 	width: auto;
-	margin-right: 2.5%;
+	margin-right: var(--nav-right-margin);
 
 	/*Cap the height so it doesn't overflow. Maintain aspect ratio.*/
 	max-height: 100%;
 }
 
-#content {
+body > nav ~ * {
 	/*Add the padding back in*/
 	padding-left: var(--left-padding);
 	padding-right: var(--right-padding);
