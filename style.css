@@ -26,11 +26,18 @@
 
 	--flip-card-front-background-color: red;
 	--flip-card-back-background-color: darkred;
-	--flip-text-color: var(--text-color);
+
+	--flip-card-img-border-color: yellow;
+	--flip-card-img-border-weight: 2px;
+	--flip-card-img-border-type: solid;
 }
 
 * {
 	color: var(--text-color);
+}
+
+b {
+	font-weight: bolder;
 }
 
 body {
@@ -100,6 +107,11 @@ body > * {
 	padding-right: var(--right-padding);
 }
 
+span.highlighted-term {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 /*
 	Flip Card Styling
 */
@@ -146,7 +158,27 @@ body > * {
 }
 
 .flip-card-back {
+	text-align: left;
 	background-color: var(--flip-card-back-background-color);
+	padding: 5%;
 	color: var(--text-color);
 	transform: rotateY(180deg);
+}
+
+.flip-card .img-container {
+	width: 80%;
+	height: 50%;
+	overflow: hidden;
+
+	/*Center horizontally*/
+	margin-left: auto;
+	margin-right: auto;
+
+	border: var(--flip-card-img-border-type) var(--flip-card-img-border-weight) var(--flip-card-img-border-color);
+}
+
+.fit-space {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
